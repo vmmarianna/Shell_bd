@@ -12,7 +12,7 @@ public class Main {
         String comand;
 
         while (true) {
-            System.out.print("@MLH>");
+            System.out.print("@>");
 
             comand = in.nextLine();
 

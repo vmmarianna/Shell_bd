@@ -14,10 +14,10 @@ public class Employee {
     }
     
     public static void print() {
-       ArrayList<String> people = new ArrayList<String>();
+        ArrayList<String> people = new ArrayList<String>();
         people.add("fghds");
         for (int i = 0; i < people.size(); i++) {
-            System.out.println(people.get(i));
+           System.out.println(people.get(i));
         }
     }
 }
