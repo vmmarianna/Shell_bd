@@ -1,23 +1,35 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Employee {
+    private String Name;
+    private String Surname;
+    private String Position;
+    private Double Salary;
 
-    public static void addd() {
+    public Double getSalary() {
+        return Salary;
+    }
 
-        ArrayList<String> people = new ArrayList<String>();
-        Scanner in = new Scanner(System.in);
-        String empl = in.nextLine();
-        people.add(empl);
+    public String getName() {
+        return Name;
     }
-    
-    public static void print() {
-        ArrayList<String> people = new ArrayList<String>();
-        people.add("fghds");
-        for (int i = 0; i < people.size(); i++) {
-           System.out.println(people.get(i));
-        }
+
+    public String getPosition() {
+        return Position;
     }
+
+    public String getSurname() {
+        return Surname;
+    }
+
+    public Employee(String Name, String Surname, String Position, double Salary){
+      this.Name=Name;
+      this.Surname=Surname;
+      this.Position=Position;
+      this.Salary=Salary;
+  }
+
+   public String toString(){
+       return ("NAME: "+this.Name + " Surname: " + this.Surname + " Position: " + this.Position + " Salary: " + this.Salary.toString());
+   }
 }
