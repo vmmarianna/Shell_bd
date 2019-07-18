@@ -17,13 +17,13 @@ public class Handler {
                 case "HELP":
                     help();
                     break;
+                    
                 case "ADD":
                     add();
                     break;
 
                 case "PRINT":
                     employees.print();
-                    //command = null;
                     break;
 
                 case "SEARCH":
@@ -62,19 +62,19 @@ public class Handler {
     private void add() {
         System.out.println("Data Input:");
         System.out.println("Name: ");
-        String n = scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.println("Surname: ");
-        String s = scanner.nextLine();
+        String surname = scanner.nextLine();
         System.out.println("Position: ");
-        String p = scanner.nextLine();
+        String position = scanner.nextLine();
         System.out.println("Salary: ");
-        double slr = -1.0;
+        double salary = -1.0;
         try {
-            slr = scanner.nextDouble();
+            salary = scanner.nextDouble();
         } catch (InputMismatchException e) {
             System.out.println("Salary is not double");
         }
-        employees.add(n, s, p, slr);
+        employees.add(name, surname, position, salary);
         scanner.nextLine();
         //command=null;
     }
