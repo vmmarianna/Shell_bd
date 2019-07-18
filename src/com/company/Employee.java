@@ -36,12 +36,7 @@ public class Employee {
     }
 
 
-    public static Comparator<Employee> nameComparator = new Comparator<Employee>() {
-        @Override
-        public int compare(Employee o1, Employee o2) {
-            return o1.getName().compareTo(o2.getName());
-        }
-    };
+    public static Comparator<Employee> nameComparator = Comparator.comparing(Employee::getName);
 
     public static Comparator<Employee> surnameComparator = new Comparator<Employee>() {
         @Override

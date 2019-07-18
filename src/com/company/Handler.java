@@ -1,19 +1,17 @@
 package com.company;
 
-import javax.naming.Name;
-import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Handler {
-    EmployeeList el = new EmployeeList();
-    Scanner sc = new Scanner(System.in);
+    EmployeeList employees = new EmployeeList();
+    Scanner scanner = new Scanner(System.in);
 
     public void serve() {
 
         while (true) {
             System.out.print("--> ");
-            String command = sc.nextLine();
+            String command = scanner.nextLine();
             switch (command.toUpperCase()) {
 
                 case "HELP":
@@ -24,7 +22,7 @@ public class Handler {
                     break;
 
                 case "PRINT":
-                    el.print();
+                    employees.print();
                     //command = null;
                     break;
 
@@ -49,35 +47,35 @@ public class Handler {
 
     private void sort() {
         System.out.print("Sort : ");
-        String by = sc.nextLine();
-        el.sort(by);
+        String by = scanner.nextLine();
+        employees.sort(by);
     }
 
     private void search() {
         System.out.print("Search by post : ");
-        String tmp = sc.nextLine();
-        el.search(tmp);
+        String tmp = scanner.nextLine();
+        employees.search(tmp);
         //System.out.println("\n\n\n");
-        //sc.nextLine();
+        //scanner.nextLine();
     }
 
     private void add() {
         System.out.println("Data Input:");
         System.out.println("Name: ");
-        String n = sc.nextLine();
+        String n = scanner.nextLine();
         System.out.println("Surname: ");
-        String s = sc.nextLine();
+        String s = scanner.nextLine();
         System.out.println("Position: ");
-        String p = sc.nextLine();
+        String p = scanner.nextLine();
         System.out.println("Salary: ");
         double slr = -1.0;
         try {
-            slr = sc.nextDouble();
+            slr = scanner.nextDouble();
         } catch (InputMismatchException e) {
             System.out.println("Salary is not double");
         }
-        el.Add(n, s, p, slr);
-        sc.nextLine();
+        employees.add(n, s, p, slr);
+        scanner.nextLine();
         //command=null;
     }
 
