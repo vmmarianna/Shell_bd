@@ -1,25 +1,20 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.Comparator;
-
 
 public class EmployeeList {
 
-    private ArrayList<Employee> people = new ArrayList<Employee>();
+    private ArrayList<Employee> people = new ArrayList<>();
 
-    //add
     public void add(String Name, String Surname, String Position, double Salary) {
         Employee e = new Employee(Name, Surname, Position, Salary);
         people.add(e);
     }
 
-    //print
     public void print() {
         printTmp(people);
     }
 
-    //Search
     public void search(String Position) {
         ArrayList<Employee> tmp = getEmployees(Position);
         if (!tmp.isEmpty()) {
@@ -45,7 +40,6 @@ public class EmployeeList {
         return tmp;
     }
 
-    //sort
     public void sort(String by) {
         switch (by.toUpperCase()) {
             case "SALARY":

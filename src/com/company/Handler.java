@@ -17,7 +17,7 @@ public class Handler {
                 case "HELP":
                     help();
                     break;
-                    
+
                 case "ADD":
                     add();
                     break;
@@ -55,8 +55,6 @@ public class Handler {
         System.out.print("Search by post : ");
         String tmp = scanner.nextLine();
         employees.search(tmp);
-        //System.out.println("\n\n\n");
-        //scanner.nextLine();
     }
 
     private void add() {
@@ -73,10 +71,11 @@ public class Handler {
             salary = scanner.nextDouble();
         } catch (InputMismatchException e) {
             System.out.println("Salary is not double");
+
         }
+
         employees.add(name, surname, position, salary);
         scanner.nextLine();
-        //command=null;
     }
 
     private void help() {

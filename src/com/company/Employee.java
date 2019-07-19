@@ -38,24 +38,11 @@ public class Employee {
 
     public static Comparator<Employee> nameComparator = Comparator.comparing(Employee::getName);
 
-    public static Comparator<Employee> surnameComparator = new Comparator<Employee>() {
-        @Override
-        public int compare(Employee o1, Employee o2) {
-            return o1.getSurname().compareTo(o2.getSurname());
-        }
-    };
 
-    public static Comparator<Employee> positionComparator = new Comparator<Employee>() {
-        @Override
-        public int compare(Employee o1, Employee o2) {
-            return o1.getPosition().compareTo(o2.getPosition());
-        }
-    };
+    public static Comparator<Employee> surnameComparator = Comparator.comparing(Employee::getSurname);
 
-    public static Comparator<Employee> salaryComparator = new Comparator<Employee>() {
-        @Override
-        public int compare(Employee o1, Employee o2) {
-            return o1.getSalary().compareTo(o2.getSalary());
-        }
-    };
+    public static Comparator<Employee> positionComparator = Comparator.comparing(Employee::getPosition);
+    
+    public static Comparator<Employee> salaryComparator = Comparator.comparing(Employee::getSalary);
+
 }
